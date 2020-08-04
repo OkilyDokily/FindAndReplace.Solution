@@ -32,5 +32,47 @@ namespace FindAndReplaceTests.ModelsTests
 
         Assert.AreEqual(result, d);
     }
+    [TestMethod]
+     public void Replace_ReplaceWordsInSentenceWithCapitalization_True(){
+        string s = "come on down to the come on down come.";
+        string d = "dog on down to the dog on down dog.";
+
+        string result = Replacer.Replace(s, "Come", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
+
+     [TestMethod]
+     public void Replace_ReplaceWordsInSentenceWithCapitalizationInSentence_True(){
+        string s = "come on down to the Come on down come.";
+        string d = "dog on down to the dog on down dog.";
+
+        string result = Replacer.Replace(s, "come", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
+    [TestMethod]
+      public void Replace_ReplaceWordsInSentenceWithFirstWordCapitalized_True(){
+        string s = "Come on down to the come on down come.";
+        string d = "dog on down to the dog on down dog.";
+
+        string result = Replacer.Replace(s, "come", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
+
+     [TestMethod]
+      public void Replace_ReplaceWordsInSentenceWithFirstWordCapitalized_True(){
+        string s = "Come on down to the come on down come.";
+        string d = "dog on down to the dog on down dog.";
+
+        string result = Replacer.Replace(s, "come", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
     }
 }
