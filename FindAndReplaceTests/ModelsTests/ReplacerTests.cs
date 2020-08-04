@@ -8,19 +8,13 @@ namespace FindAndReplaceTests.ModelsTests
     {
     [TestMethod]
     public void AddSpacesEnd_AddSpacesToWords_True(){
-        string[] ta = new string[]{"hello ", "world "};
+        string[] ta = new string[]{" hello ", " world "};
 
-        string[] aa = Replacer.AddSpacesEnd("hello","world");
+        string[] aa = Replacer.AddSpaces("hello","world");
         CollectionAssert.AreEqual(ta, aa);
     }
 
-    [TestMethod]
-     public void AddSpacesFront_AddSpacesToWords_True(){
-        string[] ta = new string[]{" hello", " world"};
-
-        string[] aa = Replacer.AddSpacesFront("hello","world");
-        CollectionAssert.AreEqual(ta, aa);
-    }
+    
 
     [TestMethod]
      public void Replace_ReplaceWordsInSentence_True(){
@@ -32,6 +26,19 @@ namespace FindAndReplaceTests.ModelsTests
 
         Assert.AreEqual(result, d);
     }
+
+    [TestMethod]
+     public void Replace_DoesNotReplacePartialWords_True(){
+        string s = "the cat is catherine.";
+        string d = "the dog is catherine.";
+
+        string result = Replacer.Replace(s, "cat", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
+
+
     [TestMethod]
      public void Replace_ReplaceWordsInSentenceWithCapitalization_True(){
         string s = "come on down to the come on down come.";
@@ -65,14 +72,14 @@ namespace FindAndReplaceTests.ModelsTests
     }
 
      [TestMethod]
-      public void Replace_ReplaceWordsInSentenceWithFirstWordCapitalized_True(){
-        string s = "Come on down to the come on down come.";
-        string d = "dog on down to the dog on down dog.";
+      public void Replace2_ReplaceWordsWithoutSpaces_True(){
+        string s = "I am walking my cat to the cathedral.";
+        string d =  "I am walking my dog to the doghedral.";
 
-        string result = Replacer.Replace(s, "come", 
+        string result = Replacer.Replace2(s, "cat", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
     }
 }
