@@ -21,5 +21,16 @@ namespace FindAndReplaceTests.ModelsTests
         string[] aa = Replacer.AddSpacesFront("hello","world");
         CollectionAssert.AreEqual(ta, aa);
     }
+
+    [TestMethod]
+     public void Replace_ReplaceWordsInSentence_True(){
+        string s = "come on down to the come on down come.";
+        string d = "dog on down to the dog on down dog.";
+
+        string result = Replacer.Replace(s, "come", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
     }
 }
