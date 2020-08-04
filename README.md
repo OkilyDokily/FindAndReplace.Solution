@@ -1,5 +1,5 @@
 
-# _Ping Pong_
+# _Find And Replace_
 
 #### _This demonstrates beginner level C#._
 
@@ -9,9 +9,8 @@
 ## Description
 
 _A page demonstrates basic C# with a console._
-_A classic ping-pong coding exercize_
-
-                              |                                         |           |           
+_A method single method that takes a string and a word and another word to replace that word with_
+         
 ## Setup/Installation Requirements
 
 ## Specs
