@@ -38,6 +38,17 @@ namespace FindAndReplaceTests.ModelsTests
         Assert.AreEqual(result, d);
     }
 
+     [TestMethod]
+     public void Replace_DoesNotReplacePartialWords_True2(){
+        string s = "catherine is a cat";
+        string d = "catherine is a dog";
+
+        string result = Replacer.Replace(s, "cat", 
+        "dog");
+
+        Assert.AreEqual(result, d);
+    }
+
 
     [TestMethod]
      public void Replace_ReplaceWordsInSentenceWithCapitalization_True(){
