@@ -6,15 +6,6 @@ namespace FindAndReplaceTests.ModelsTests
     [TestClass]
     public class ReplacerTests
     {
-    [TestMethod]
-    public void AddSpacesEnd_AddSpacesToWords_True(){
-        string[] ta = new string[]{" hello ", " world "};
-
-        string[] aa = Replacer.AddSpaces("hello","world");
-        CollectionAssert.AreEqual(ta, aa);
-    }
-
-    
 
     [TestMethod]
      public void Replace_ReplaceWordsInSentence_True(){
@@ -24,7 +15,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "come", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
 
     [TestMethod]
@@ -35,7 +26,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "cat", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
 
      [TestMethod]
@@ -46,7 +37,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "cat", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
 
 
@@ -58,7 +49,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "Come", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
 
      [TestMethod]
@@ -69,7 +60,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "come", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
     [TestMethod]
       public void Replace_ReplaceWordsInSentenceWithFirstWordCapitalized_True(){
@@ -79,7 +70,7 @@ namespace FindAndReplaceTests.ModelsTests
         string result = Replacer.Replace(s, "come", 
         "dog");
 
-        Assert.AreEqual(result, d);
+        Assert.AreEqual(d, result);
     }
 
      [TestMethod]

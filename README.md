@@ -14,7 +14,12 @@ _A method single method that takes a string and a word and another word to repla
 ## Setup/Installation Requirements
 
 ## Specs
-
+| Spec | Input | Output |
+|-|-|-|
+| write a static method Replace method | Replace(str, find, replace) | "modified string" |
+| call the regex extension method from the replace method | str.Replace...(find,replace) | "modified string |
+| call the static method Replace2 | Replace2(str, find, replace) | "modified string" |
+| call the regex extension method from replace2 | str.Replace...(find, replace) | "modified string" |
 
 ## Known Bugs
 
